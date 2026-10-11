@@ -1,0 +1,66 @@
+@import '@xyflow/react/dist/style.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom canvas & handle styles */
+.react-flow__background {
+  background-color: #070a12;
+}
+
+.react-flow__handle {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 0 2px #0f172a, 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.react-flow__handle:hover {
+  transform: scale(1.35);
+  box-shadow: 0 0 0 3px #10b981, 0 0 12px rgba(16, 185, 129, 0.5);
+}
+
+.react-flow__edge-path {
+  stroke: #38bdf8;
+  stroke-width: 2.5;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+  transition: stroke 0.2s, stroke-width 0.2s;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #10b981;
+  stroke-width: 3.5;
+}
+
+.react-flow__controls {
+  background-color: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(8px);
+  border: 1px solid #334155 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background-color: transparent !important;
+  border-bottom: 1px solid #1e293b !important;
+  fill: #94a3b8 !important;
+  color: #94a3b8 !important;
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.react-flow__controls-button:hover {
+  background-color: rgba(51, 65, 85, 0.5) !important;
+  fill: #f1f5f9 !important;
+  color: #f1f5f9 !important;
+}
+
+.react-flow__minimap {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  border: 1px solid #334155 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
